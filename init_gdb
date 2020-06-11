@@ -1,0 +1,3 @@
+file isodir/boot/osone
+target remote localhost:3333
+b kernel_main

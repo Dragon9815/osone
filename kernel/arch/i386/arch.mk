@@ -1,0 +1,11 @@
+KERNEL_ARCH_CFLAGS=-target i686-pc-none-elf
+KERNEL_ARCH_CPPFLAGS=-DKERNEL_PLATFORM_I386=1
+KERNEL_ARCH_ASFLAGS=-felf32
+KERNEL_ARCH_LDFLAGS=
+KERNEL_ARCH_LIBS=
+ 
+KERNEL_ARCH_SRCS=\
+$(ARCHDIR)/src/boot.asm \
+$(ARCHDIR)/src/gdt.c \
+$(ARCHDIR)/src/gdt_flush.asm \
+$(ARCHDIR)/src/serial.c \

@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "kernel"
+		},
+		{
+			"path": "libc"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"platform.h": "c",
+			"platform_i386.h": "c"
+		}
+	}
+}
