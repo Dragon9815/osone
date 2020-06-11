@@ -55,6 +55,7 @@ all: $(OSNAME)
 
 $(OSNAME): $(OBJS) $(ARCHDIR)/kernel.ld
 	$(LD) -T $(ARCHDIR)/kernel.ld -o $@ $(LDFLAGS) -Map $@.map $(LINK_LIST)
+	$(OBJDUMP) -S -d $@ > $@.lst
 	grub-file --is-x86-multiboot $@ 
 
 $(BUILDDIR)/%.o: %.c

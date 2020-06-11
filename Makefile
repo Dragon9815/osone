@@ -9,6 +9,7 @@ CXX := clang++
 LD := $(HOST)-ld
 AS := nasm
 AR := $(HOST)-ar
+OBJDUMP := $(HOST)-objdump
 
 PREFIX := /usr
 EXEC_PREFIX := /usr

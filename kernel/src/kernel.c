@@ -25,9 +25,17 @@ void kernel_main( void )
 
     serial_init( 115200, SERIAL_DATABITS_8, SERIAL_STOPBITS_1, SERIAL_PARITY_NONE );
 
-    serial_sendString( "Hello, World!" );
+    serial_sendString( "Hello, World!\n\r" );
 
     gdt_init( );
+
+    volatile int x = 10;
+    volatile int z = 0;
+    volatile int y = x / z;
+
+    (void)y;
+
+    serial_sendString( "WTF\n\r" );
 
     while( true )
     {
